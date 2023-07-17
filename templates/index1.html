@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to FitX</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+<!--        <script src="{{ url_for('static', filename='js/diet.js') }}"></script>-->
+            <script src="static/js/diet.js"></script>
+
+
+
+<!--            <link rel="stylesheet" type="text/css" href="/static/style.css">-->
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+        <h1 class="centered-heading">Fit-X</h1>
+            <script src="static/js/diet.js"></script>
+
+
+
+
+<div class="vertical-menu">
+    <a href="{{ url_for('home') }}" class="btn btn-dark">
+            <input type="submit" class="btn btn-dark" value="Login"></a>
+
+    <a href="{{ url_for('bmi') }}" class="btn btn-info">
+            <input type="submit" class="btn btn-info" value="BMI Calculator"></a>
+
+    <a href="{{ url_for('exercises') }}" class="btn btn-dark">
+            <input type="submit" class="btn btn-dark" value="Exercises"></a>
+
+    <a href="{{ url_for('diet') }}" class="btn btn-info">
+            <input type="submit" class="btn btn-info" value="Diet plans"></a>
+
+    <a href="{{ url_for('hydration') }}" class="btn btn-dark">
+            <input type="submit" class="btn btn-dark" value="Hydration"></a>
+
+</div>
+<style>
+
+.vertical-menu {
+<!--    display: flex;-->
+    flex-direction: column;
+<!--    width: 20%;-->
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+.vertical-menu {
+    color:#133bed;
+    font-size: 24px;
+    background-color: #00000;
+    text-decoration: none;
+    padding: 16px;
+    transition: background_color 0.3s;
+}
+.centered-heading{
+    font-size: 58px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+</style>
+
+<!--<div class="container">-->
+<!--    <h1><b>Workout Schedule</b></h1>-->
+<!--    <form action="/generate_schedule" method="POST">-->
+<!--        <label for="name">Name:</label>-->
+<!--        <input type="text" id="name" name="name" required><br><br>-->
+
+<!--        <label for="age">Age:</label>-->
+<!--        <input type="number" id="age" name="age" required><br><br>-->
+
+<!--        <label for="weight">Weight:</label>-->
+<!--        <input type="number" id="weight" name="weight" required><br><br>-->
+
+<!--        <label for="height">Height:</label>-->
+<!--        <input type="number" step = "0.01" id="height" name="height" required><br><br>-->
+
+<!--        <label for="muscle">Muscle Group:</label>-->
+<!--        <select id="muscle" name="muscle">-->
+<!--            <option value="shoulders">Shoulders</option>-->
+<!--            <option value="chest">Chest</option>-->
+<!--            <option value="biceps">Biceps</option>-->
+<!--            <option value="triceps">Triceps</option>-->
+<!--            <option value="legs">Legs</option>-->
+<!--            <option value="back">Back</option>-->
+<!--            <option value="abs">Abs</option>-->
+<!--            <option value="cardio">Cardio</option>-->
+<!--            <option value="body weight training">Body Weight Training</option>-->
+<!--        </select><br><br>-->
+
+<!--        <input type="submit" class="btn btn-dark" value="Generate Schedule">-->
+<!--    </form>-->
+<!--    </div>-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<table class="table">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th scope="col">Sno</th>-->
+<!--            <th scope="col">Name</th>-->
+<!--            <th scope="col">Age</th>-->
+<!--            <th scope="col">Weight</th>-->
+<!--            <th scope="col">Height</th>-->
+<!--            <th scope="col">Muscle</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+
+<!--        {% if allf|length==0 %}-->
+<!--        <p><b>Table is empty....-->
+<!--            Insert your records</b></p>-->
+
+<!--        {% else %}-->
+
+<!--        {% for f in allf %}-->
+<!--        <tr>-->
+<!--            <th scope="row">{{loop.index}}</th>-->
+<!--            <td>{{f.name}}</td>-->
+<!--            <td>{{f.age}}</td>-->
+<!--            <td>{{f.weight}}</td>-->
+<!--            <td>{{f.height}}</td>-->
+<!--            <td>{{f.muscle}}</td>-->
+<!--            <td>-->
+<!--                <button><a href="/update/{{f.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-2">Update</a></button>-->
+
+<!--                <button><a href="/delete/{{f.sno}}" type="button" class="btn btn-outline-dark btn-sm mx-2">Delete</a></button>-->
+
+<!--            </td>-->
+<!--        </tr>-->
+<!--        {% endfor %}-->
+<!--        {% endif %}-->
+
+
+<!--        </tbody>-->
+<!--    </table>-->
+
+
+
+
+
+
+
+

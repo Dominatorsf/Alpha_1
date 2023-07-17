@@ -265,44 +265,6 @@ def generate_workout_schedule(muscle):
 
 
 
-@app.route('/show')
-def show():
-    allf = User.query.all()
-    print(allf)
-    return 'This is database page'
-
-
-
-
-@app.route('/update/<int:sno>',methods=['GET','POST'])
-def update(sno):                                                                              # To delete any row or entry from the following table
-    if request.method=='POST':
-        name = request.form['name']
-        weight = request.form['weight']
-        height = request.form['height']
-        age = request.form['age']
-        muscle = request.form['muscle']
-        f = User.query.filter_by(sno=sno).first()
-        f.name = name
-        f.weight = weight
-        f.height = height
-        f.age = age
-        f.muscle = muscle
-        db.session.add(f)
-        db.session.commit()
-        return redirect('/')
-
-    f = User.query.filter_by(id=sno).first()
-    return render_template('update.html', f=f, sno=sno)
-
-@app.route('/delete/<int:sno>')
-def delete(sno):                                                                              # To delete any row or entry from the following table
-    f = User.query.filter_by(sno=sno).first()
-    db.session.delete(f)
-    db.session.commit()
-    return redirect("/")
-
-
 if __name__ == '__main__':
     app.run(debug=True, port=9000)
 
